@@ -19,7 +19,7 @@ fn kanal_bench(bencher: Bencher) {
     });
     sleep(DELAY);
     bencher.bench_local(|| {
-        black_box(receiver.try_recv_realtime().unwrap());
+        black_box(receiver.try_recv().unwrap());
     });
 }
 
