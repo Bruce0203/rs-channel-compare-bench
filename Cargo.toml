@@ -20,3 +20,5 @@ kanal = "0.1.0-pre8"
 crossbeam = { version = "0.8.4", features = ["crossbeam-channel"] }
 
 
+[profile.bench]
+lto = 'fat'
