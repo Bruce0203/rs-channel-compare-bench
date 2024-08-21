@@ -1,0 +1,22 @@
+[package]
+name = "rs-channel-compare-bench"
+version = "0.1.0"
+edition = "2021"
+
+[[bench]]
+name = "compare"
+harness = false
+
+[workspace]
+resolver = "2"
+
+[dev-dependencies]
+divan = "0.1.14"
+crossbeam = "0.8.4"
+flume = "0.11.0"
+kanal = "0.1.0-pre8"
+
+[dependencies]
+crossbeam = { version = "0.8.4", features = ["crossbeam-channel"] }
+
+
