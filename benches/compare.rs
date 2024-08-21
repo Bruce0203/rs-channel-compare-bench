@@ -13,7 +13,7 @@ fn main() {
 
 #[divan::bench(sample_size = SAMPLE_SIZE , sample_count = SAMPLE_COUNT)]
 fn kanal_bench(bencher: Bencher) {
-    let (sender, receiver) = kanal::unbounded();
+    let (sender, receiver) = kanal::unbounded_async();
     std::thread::spawn(move || loop {
         let _ = black_box(sender.send(Token(123)));
     });
